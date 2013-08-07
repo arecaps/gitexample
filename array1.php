@@ -7,5 +7,10 @@ $records[] = $record;
 $record['first_nm'] = 'Big';
 $record['last_nm'] = 'Bird</br>';
 $records[] = $record;
+$record['first_nm'] = 'The';
+$record['last_nm'] = 'Count';
+$records[] = $record;
+sort($records);
+array_pop($records);
 print_r($records);
 ?>
