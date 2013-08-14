@@ -25,4 +25,5 @@
       echo 'Your current balance is: ' . $this->current_bal . '<br>';
     }
   }
+  print_r($obj);
 ?>
