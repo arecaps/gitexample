@@ -19,9 +19,11 @@
       }
     public function credit($amount){
       $this->current_bal = $this->current_bal + $amount;
+      $current = (array) $this->current_bal;
+      print_r ($current);
     }
     public function __destruct() {
-      echo 'Your starting balance was: ' . $this->starting_bal . '<br>';
+      echo '<br>Your starting balance was: ' . $this->starting_bal . '<br>';
       echo 'Your current balance is: ' . $this->current_bal . '<br>';
     }
   }
