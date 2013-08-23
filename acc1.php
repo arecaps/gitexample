@@ -3,7 +3,6 @@
   $obj = new account(1000);
   $obj->debit(100);
   $obj->credit(200);
-  $obj->debit(500);
   class account {
     
     public $starting_bal;
