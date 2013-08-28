@@ -2,10 +2,11 @@
 class pages{
 	function __construct(){
 		if (!isset($_REQUEST['pg'])){
-			$sign_up = '<a href="/myexample/logins.php?pg=sign_up">Sign up</a>'; 
+			$sign_up = '<a href="/myexample/logins.php?pg=sign_up">Sign up<br></a>'; 
 			$login = '<a href="/myexample/logins.php?pg=login">Log in</a>'; 
-			echo $sign_up . '<br>';
-			echo $login;
+			$first_pg = $sign_up;
+			$first_pg .= $login;
+			echo $first_pg;
 		}else if ($_REQUEST['pg']=='sign_up'){
 		  $sign_up = '<FORM action="/myexample/logins.php" method="post">
       <P>sign up<br>
