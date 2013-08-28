@@ -33,7 +33,7 @@ class pages{
       ';
       echo $log_form;		
       }
-	}
+  }
 }
 $firstpage = new pages;
 ?>
