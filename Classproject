@@ -1,7 +1,7 @@
 <?php
 class pages{
 	function __construct(){
-		if (!isset($_REQUEST['pg'])){
+		if ($_REQUEST == null){
 			$sign_up = '<a href="/myexample/logins.php?pg=sign_up">Sign up<br></a>'; 
 			$login = '<a href="/myexample/logins.php?pg=login">Log in</a>'; 
 			$first_pg = $sign_up;
