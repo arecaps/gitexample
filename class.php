@@ -21,21 +21,20 @@ $this->post();
 }	
 }
 protected function get() {
-echo '<a href="page_class.php?class=form1">Form 1</a>' . "<br> \n";
-echo '<a href="page_class.php?class=form2">Form 2</a>' . "<br> \n";	
+echo '<a href="class.php?class=sign_up">Sign up</a>' . "<br> \n";
+echo '<a href="class.php?class=login">Log in</a>' . "<br> \n";	
 }
 protected function post() {
 print_r($_POST);
 }
 }
-class form1 extends page {
+class sign_up extends page {
 public function get() {
-echo 'Form 1' . "<br> \n";
-echo '<a href="page_class.php?class=form1">Form 1</a>' . "<br> \n";
-echo '<a href="page_class.php?class=form2">Form 2</a>' . "<br> \n";
-echo '<a href="page_class.php">Homepage</a>' . "<br> \n";
+//echo '<a href="class.php?class=form1">Sign up</a>' . "<br> \n";
+//echo '<a href="class.php?class=form2">Log in</a>' . "<br> \n";
+//echo '<a href="class.php">Homepage</a>' . "<br> \n";
 
-$form = '<FORM action="page_class.php?class=form1" method="post">
+$form = '<FORM action="class.php?class=sign_up" method="post">
 <P>
 <LABEL for="firstname">First name: </LABEL>
 <INPUT type="text" name="firstname" id="firstname"><BR>
@@ -43,7 +42,11 @@ $form = '<FORM action="page_class.php?class=form1" method="post">
 <INPUT type="text" name="lastname" id="lastname"><BR>
 <LABEL for="email">email: </LABEL>
 <INPUT type="text" name="email"id="email"><BR>
-<INPUT type="submit" value="Send"> <INPUT type="reset">
+<LABEL for="username">Username: </LABEL>
+<INPUT type="text" name="username" id="username"><BR>		
+<LABEL for="password">Password: </LABEL>
+<INPUT type="text" name="password" id="password"><BR>
+<INPUT type="submit" value="Send"> 
 </P>
 </FORM>';
 
@@ -52,12 +55,19 @@ echo $form;
 }	
 
 }
-class form2 extends page {
+class login extends page {
 public function __construct() {
-echo 'Form 2' . "<br> \n";
-echo '<a href="page_class.php?class=form1">Form 1</a>' . "<br> \n";
-echo '<a href="page_class.php?class=form2">Form 2</a>' . "<br> \n";
-echo '<a href="page_class.php">Homepage</a>' . "<br> \n";
+	$form = '<FORM action="class.php?class=login" method="post">
+	<P>
+	<LABEL for="username">Username: </LABEL>
+	<INPUT type="text" name="username" id="username"><BR>
+	<LABEL for="password">Password: </LABEL>
+	<INPUT type="text" name="password" id="password"><BR>
+	<INPUT type="submit" value="Send"> 
+	</P>
+	</FORM>';
+	
+	echo $form;
 }
 }
 class homepage extends page {}
