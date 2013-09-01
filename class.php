@@ -77,4 +77,30 @@ class login extends page {
 }
 
 class homepage extends page {}
+class info_collect extends login{
+  function __construct(){
+    $first_name = $_POST['firstname'];
+    $last_name = $_POST['lastname'];
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $user_info = array('first name' =>$first_name,'last name'=>$last_name,'username'=>$username,'password'=> $password);
+    $user_file = fopen('user_records.csv', 'a');
+    fputcsv($user_file, $userinfo);
+    fclose($user_file);
+   }
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
