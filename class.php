@@ -12,7 +12,6 @@ class program {
 
           $obj = new homepage();
           }
-  print_r($_REQUEST);
   }
 }
 
@@ -32,7 +31,20 @@ class page {
   }
 
   protected function post() {
-  print_r($_POST);
+    if ($_SERVER['QUERY_STRING'] == 'class=sign_up') {
+    $first_name = $_POST['firstname'];
+    $last_name = $_POST['lastname'];
+    $email = $_POST['email'];
+	$username = $_POST['username'];
+    $password = $_POST['password'];
+    $user_info = array('first name' =>$first_name,'last name'=>$last_name, 'email' => $email,'username'=>$username,'password'=> $password);
+    print_r($user_info);
+   // $user_file = fopen('user_records.csv', 'a');
+   // fputcsv($user_file, $userinfo);
+   // fclose($user_file);
+   }
+     
+
   }
 }
 class sign_up extends page {
@@ -55,7 +67,6 @@ class sign_up extends page {
 </FORM>';
 
   echo $form;
-  $obj = new info_collect;
   }	
 
 }
@@ -77,20 +88,7 @@ class login extends page {
 }
 
 class homepage extends page {}
-class info_collect extends sign_up{
-  function __construct(){
-    $first_name = $_POST['firstname'];
-    $last_name = $_POST['lastname'];
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $user_info = array('first name' =>$first_name,'last name'=>$last_name,'username'=>$username,'password'=> $password);
-    print_r($user_info);
-   // $user_file = fopen('user_records.csv', 'a');
-   // fputcsv($user_file, $userinfo);
-   // fclose($user_file);
-   }
-     
-}
+
 
 
 
