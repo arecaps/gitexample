@@ -30,18 +30,18 @@ class page {
     echo '<a href="class.php?class=login">Log in</a>' . "<br> \n";	
   }
 
-  protected function post() {
-    print_r($_SERVER['QUERY_STRING']);
-	if ($_SERVER['QUERY_STRING'] == 'class=sign_up') {
-    $obj = new write_info;
-	}
-	elseif ($_SERVER['QUERY_STRING'] == 'class=login') {
+  //protected function post() {
+    //print_r($_SERVER['QUERY_STRING']);
+	//if ($_SERVER['QUERY_STRING'] == 'class=sign_up') {
+   //
+	//}
+	//elseif ($_SERVER['QUERY_STRING'] == 'class=login') {
     //run an authenticating class here 
-    echo 'hi Mark';
-	$obj = new authenticate;
+   // echo 'hi Mark';
+	//
   // print_r($obj);
-   }
-  }
+   //}
+  //}
 }
 class sign_up extends page {
   public function get() {
@@ -64,11 +64,12 @@ class sign_up extends page {
 
   echo $form;
   }	
-
+public function post(){
+ $obj = new write_info;
 }
-
+}
 class login extends page {
-  public function __construct() {
+  public function get() {
 	$form = '<FORM action="class.php?class=login" method="post">
 	<P>
 	<LABEL for="username">Username: </LABEL>
@@ -81,7 +82,10 @@ class login extends page {
 	
 	echo $form;
   }
+public function post(){
+$obj = new authenticate;
 }
+  }
 
 class homepage extends page {}
 
@@ -94,7 +98,7 @@ class write_info{
 	$username = $_POST['username'];
     $password = $_POST['password'];
     
-	$user_info = array('first name' =>$first_name,'last name'=>$last_name, 'email' => $email,'username'=>$username,'password'=> $password);
+	$user_info = array($first_name,$last_name, $email, $username, $password);
     print_r($user_info);
     
 	$user_file = fopen('user_records.csv', 'a');
@@ -105,10 +109,9 @@ class write_info{
 }   
 class authenticate{
 function __construct(){
-echo 'hello Mark!';
 if ($_POST['username'] == null || $_POST['password'] == null){
-echo 'please write both your username and your password'; 
- //$obj = new login;
+echo 'Error! Please enter both your username and your password in order to proceed<br>';
+echo login::get();
  }
  }
 }
