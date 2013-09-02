@@ -28,20 +28,7 @@ class page {
   protected function get() {
     echo '<a href="class.php?class=sign_up">Sign up</a>' . "<br> \n";
     echo '<a href="class.php?class=login">Log in</a>' . "<br> \n";	
-  }
-
-  //protected function post() {
-    //print_r($_SERVER['QUERY_STRING']);
-	//if ($_SERVER['QUERY_STRING'] == 'class=sign_up') {
-   //
-	//}
-	//elseif ($_SERVER['QUERY_STRING'] == 'class=login') {
-    //run an authenticating class here 
-   // echo 'hi Mark';
-	//
-  // print_r($obj);
-   //}
-  //}
+ }
 }
 class sign_up extends page {
   public function get() {
@@ -91,7 +78,11 @@ class homepage extends page {}
 
 class write_info{
   function __construct(){
-    
+    if ($_POST['firstname'] == null || $_POST['lastname'] == null || $_POST['email'] == null || $_POST[username] == null || $_POST['password'] == null){
+	echo 'Sorry, you must fill out all fields to proceed';
+	echo sign_up::get();
+	}
+	else {
 	$first_name = $_POST['firstname'];
     $last_name = $_POST['lastname'];
     $email = $_POST['email'];
@@ -105,6 +96,7 @@ class write_info{
     fputcsv($user_file, $user_info);
     fclose($user_file);
    }
+   }
     
 }   
 class authenticate{
@@ -113,6 +105,8 @@ if ($_POST['username'] == null || $_POST['password'] == null){
 echo 'Error! Please enter both your username and your password in order to proceed<br>';
 echo login::get();
  }
+ //validate here
+//else
  }
 }
 ?>
