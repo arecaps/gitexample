@@ -31,13 +31,16 @@ class page {
   }
 
   protected function post() {
-    if ($_SERVER['QUERY_STRING'] == 'class=sign_up') {
+    print_r($_SERVER['QUERY_STRING']);
+	if ($_SERVER['QUERY_STRING'] == 'class=sign_up') {
     $obj = new write_info;
 	}
-	//elseif ($_SERVER['QUERY_STRING'] == 'class=login') {
+	elseif ($_SERVER['QUERY_STRING'] == 'class=login') {
     //run an authenticating class here 
-    //$obj = new authenticate;
-  // }
+    echo 'hi Mark';
+	$obj = new authenticate;
+  // print_r($obj);
+   }
   }
 }
 class sign_up extends page {
@@ -100,7 +103,13 @@ class write_info{
    }
     
 }   
-//class authenticate{
-  //}
-
+class authenticate{
+function __construct(){
+echo 'hello Mark!';
+if ($_POST['username'] == null || $_POST['password'] == null){
+echo 'please write both your username and your password'; 
+ //$obj = new login;
+ }
+ }
+}
 ?>
