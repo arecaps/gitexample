@@ -110,7 +110,9 @@ class authenticate{
     }
  //validate here
 //else
- //after validation send it to transactions
+ //validate
+ //$obj = new transactions;
  }
 }
+//class transactions{
 ?>
