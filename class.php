@@ -25,7 +25,8 @@ class page {
   
     }
   protected function get() {
-    echo '<a href="class.php?class=sign_up">Sign up</a>' . "<br> \n";
+    echo "Welcome to the Bank!<br><br>";
+	echo '<a href="class.php?class=sign_up">Sign up</a>' . "<br> \n";
     echo '<a href="class.php?class=login">Log in</a>' . "<br> \n";	 
 	}
 }
