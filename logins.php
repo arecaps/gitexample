@@ -1,4 +1,5 @@
 <?php
+
 class pages{
 	function __construct(){
 		if (!isset($_REQUEST['pg'])){
