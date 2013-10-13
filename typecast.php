@@ -9,5 +9,5 @@ class colors{
   $obj = new colors;
 
 $wardrobe = (array)$obj;
-
+print_r($wardrobe);
 ?>
