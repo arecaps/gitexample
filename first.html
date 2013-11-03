@@ -3,17 +3,31 @@
 	<head>
 		<title>First HTML Page</title>
 		<style >
+		
+		section{
+		border:thin solid black;
+		border-radius:20px;
+		background-color:aliceblue;
+		}
+		
 		p{
 		background-color: rgb(36%, 59%, 22%);
 		margin:auto;
 		}
 		ul.grouch { list-style-image: url("http://ecx.images-amazon.com/images/I/41iDIF-1TpL._AA160_.jpg");
 		;}
-		li{margin-left:1em; font-size:100px;}
+		
+		li{
+		margin-left:1em; 
+		font-size:100px;
+		text-shadow:9px 10px 4px green;
+		}
+		
 		div{
 		margin:auto;
 		text-align:center;
 		}
+		
 		table {
 		border: #000000 1px solid;
 		background-color: #acd1b2;
@@ -52,7 +66,7 @@
 	</head>
 	
 	<body>
-		
+		<section>
 		<div>
 		<img src="http://ecx.images-amazon.com/images/I/41SAXtmuRAL._AA160_.jpg"/></div>
 		
@@ -60,16 +74,17 @@
 		style="background-color: cadetblue; 
 		text-align:center; 
 		width:3em;
+		font-size:50px;
 		margin:auto;
 		margin-bottom:50px;"
 		>Hello!</h1>
 		
 		<div>
 			
-			<p style=font-size:50px;margin-bottom:50px;>This is the first html page that I'm submitting!</p>
-			<p style=font-size:34px;color:yellow;width:355px;margin-bottom:50px;><em>I will use it to experiment</em> </p>
+			<p style=font-size:30px;width:355px;>This is my first html page!</p>
+			<p style=font-size:34px;color:yellow;width:355px;margin-bottom:30px;><em>I will use it to experiment</em> </p>
 		</div>
-		
+		</section>
 		<h2 style>I plan on mastering:</h2>
 		
 		<ul class="grouch">
@@ -77,6 +92,7 @@
 		<li>css</li>
 		<li>php</li>
 		<li>javascript</li>
+		<li>kung fu</li>
 		</ul>
 	
 	<table>
@@ -94,7 +110,7 @@
 			<tr>
 				<td><img id="bottom_left" src="http://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Emperor_RotJ.png/250px-Emperor_RotJ.png"/></td>
 				<td><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/170px-Official_portrait_of_Barack_Obama.jpg"></td>
-				<td><img id="bottom_right" src="http://images2.wikia.nocookie.net/__cb20120221081706/muppet/images/thumb/7/77/Bertdoor.JPG/300px-Bertdoor.JPG"/></td>
+				<td><img id="bottom_right" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAH8ANwMBEQACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAABAUGBwgCAwH/xAA8EAACAQMCAwQHBQUJAAAAAAABAgMABBEFIQYSMRNBUYEHFCJhcZGhMjNCscIjcrPB0RUWJWRzgpKisv/EABoBAAIDAQEAAAAAAAAAAAAAAAACAQMEBQb/xAA0EQACAQIEAwYEBAcAAAAAAAAAAQIDEQQSITFBYYETIlGRocEFcbHwMrLD0RQVI0KDwvH/2gAMAwEAAhEDEQA/ALxoA4kkWMAseuwHjQB4pewPMYkcMwXm2328aAO7S6gvIe2tpFkjLFQynIJBIP1BoA9qACgAoAKAIb6QdcGg2JkvomawuA0faDP7J8Apkjocjbu36jAyAUHa8Y8SPeXU+nSTsbhBG4QGTlAzjfu6/QdwonOEPxOxMYSl+FXNCejPTL/SuDrCDVSvrbKXdVbmCgnKjPecYz780XT1RBKqACgAoAKAPC9l7G0mkxnlQkA1TXqdlSlPwQ0I5pJFUajboJWKoq5JOwxXklOT3Z36eisSvgrVGj5bCYkxn7sn8J8POup8NxbjPsZbPYwYyin30TOu+c0KACgAoAaeJ2k/sW6jtpY47l0IiLjIDdxx3isPxCcVQaly+pdQTc1YqPV9H16HkS44lY3DWq3LRw6WBGEZguBKTjmGc4x0FZpYXDU6Ha5eCerZro1KtSt2V/QcOH9Bit1OpPPqr3FoYjFdXN4GiuGZfbCovTlJOxHdU4pUlhO0pWW23zFiqiruFS/UsXh/Xzq11d2z2/ZPb43DZDA/lV2DxrxDaasVYjDdlFSTvcfa6BlCgAoAjPEuj3N1qdpqMLr2dvG6yIx3xg7j51yPiWGnP+qtkjdha8YwdN8SH61LIIGiMshQDKxljgfAVxY1JyioN6LgdnBRip5rajZptzDE0Yd0Evcuctj4daJwk9baFuMcc1uJZ/C9pbJYC7iiCzT/AHj75bBIHwrv/DKcVQU0tX+7PO4qcnPK3oh6rpGUKACgDmRQ6MjDIYYIpZRUk0yU7alca/w7O08gWxW4UHZjynPkTXnHgcVTm1BaeN0daliaTV5MR6dw9fpJgWyRD4qB9Kn+X4me683/ANLJYyiloyy9LjWKwhiQqeRQGwc+13/Wu/QpdlTjDwOPUlnk5CqrRAoAKAIb6QOJZNMhjsNPMnrlwwUtEMtGD4bdcA/Txqqc8vG1lf8AZdX7lkYNxulf71fS66sa4NduND0Qz6rFzLLMRCvMedid25tjgZycnxx3ZMRxEakFJa8N1rbS+tho0JZmkueibtf5XEd7xsk1py6YnLcNsWYh+zHjhc5Phnbx8DOZR1kn10XnsEqbvlTV/L0dmJOD9Y1LTtR7aT2tOdSZY+3DktjqPBubqTjOTmsNf4jGnLvNt/f2uRojgnbLbh63f1XqWnp1217arO0DQ824ViDkeO1bMPWdaGdxsZKkMkst7iqrxAoAqvj1b2y4ge5TtE7T2opBCXByoUgEfAZHu99ZMRSjVWWe3zS8fFrXV8rczXQmo6q1+q8OTTWl+D9CM6nrlzfWFtZzLhoWYo5cwHfxAbJ391JTpuNNQpvRclL2svMtkoOTnUV7/NLzll9BsMSsypPJj/WXn37hjZ/PamTy3lFLo8r8eF49NQT7tm38t48OEr334acx60O2ln1KztfWuzaWZUR+ftNu/YjKjYjriq50o4iLg1rzjt1TV+qDN2SzR25Nrzj3lxXFbly6PYnTrCO2MnPyZ3xgDJzge6tGFoOhSUG7mStU7SblYXVoKgoAZ+LI1l0G5V0Rvs4DjI+0Khkopm4iCxsYiU5hnC7Dop7v3qoULtZtdt9eKXH5M21O6pOOm/BLhP8AZeQ3wRCO4jHTEg/jsKR6x6fpBN2cnzl6SgS3gjsv7w6bK6jJCg/HkP6nHyq2/f6v39l6kVY5YuPhf6pf6+hcNXGIKACgCP8AHc6WnDc9zKzBInjLcvXBcA/nSVL5XYeFs2uxUEtzDPAywTJI3Ly4Dbj7penkaVNZ0+a+sn9EvM0OeaDv4S/I/eVhBM5Sd3xsqyP/AMZx/Wq6SvlXjkXnBoat/d/k/LF+w96TM1nf2jD2WjlULk45iJCAPMqg+dRBuyfJflT9peY1S15X4t/W/wCpfoXkOlajAfaACgCL+kxO04I1MDqFRvk60s9iVuZx1LBlbyI+VVx2GEMU8vbECaUKBjAc4x1/OnIuxRbTOL9LnJLRt2gJ36b/AJ0r0VidzXEEgmgjlXo6hh5irRD0oAKAGPjiPteENXX/ACrn5DP8qWWxK3MxagQ0vkKRDDfH7MpLdDsabgKhUcRxNjqwx5UpJrDQGLaFpzHqbWI/9RVi2FF9SAUAItat/W9GvrfGe1t5E+akVD2BGUr0e2W7+8eFVodnMMf+EXE/Lkx3cC9PwskxP/haYVHMSCe4UZ9gsPlSvQk1bw23Pw9pbYxm0iOP9gqyOxDHGpICgAoAyhxDb+qard2/fDM8R9/KxH8qqQ7OtGUPpGqKfwmF8+bD9RqWQNcbSpIOUBjnYUAaj4Dna54M0WZ1Ks1nHsf3aeOxD3H6pICgDmR1jRndgqgZJJ2FAGb+PLO2m4lvZ7G2uI4ZZSw5iTzMTkkk9MnJx76WMU3oxtSZcJ8L6ZxBwrf2mmW81ijGFmvWj5zcOuSQpJ3UHbY9/SlXeTLatJ0rX3Idq/B/qWopaWkk1zPJGHUBMD379O6nUO5mKW+9YujgzVbWLSdO0icG3u4YViEbn7fKOoPwGcUsZR2RLi9yU04oUAItWsTqNi9stzLbFiCJYuUkYPgwII8qiSurDQlld2rkf0fgeLT9TS/n1CW4eM5WMRJGhPcWwMnHXqN6SNNJ3HlUurJEsAAAAGAO4VYVEOf0eWEur3Ooy6lqX7d3YwxzBFAY5K5A5sfAiq+zV3qaf4l5Usq05DtpPCHD+kTLcWOlW63CnIncGSQHx5myfrTKMVsiuVapLRsfKYqP/9k="/></td>
 			</tr>
 		</table>
 	
