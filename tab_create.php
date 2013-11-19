@@ -13,7 +13,7 @@ echo $e->getMessage();
 
 $DBH->query('CREATE DATABASE school_data');
 
-$DBH->query('CREATE TABLE enrollment (ID INT, Enrollment INT));
+$DBH->query('CREATE TABLE enrollment (ID INT, Enrollment INT)');
 
 $DBH = null;
 ?>
