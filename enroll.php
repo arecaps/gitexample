@@ -18,17 +18,23 @@
                                 if($rowcount ==0){
                                         $rowcount++;
                                         continue; 
-                                } else {
+                                } 
+								elseif($rowcount==10){
+								break;
+								}
+								
+								
+								else {
                                 $rows[] = $data;
                                 }
         
         $row = $rows[0];
         unset ($rows);
                 
-                $array['ID'] = $row[1];
+                $array['ID'] = $row[0];
                 $array['enrollment'] = $row[4];
               
-             $STH =$DBH->prepare("INSERT INTO enrollment (ID, enrollment) VALUES (:ID, :enrollment)");
+             $STH =$DBH->prepare("INSERT INTO enrollment11 (ID, enrollment) VALUES (:ID, :enrollment)");
 
                         if ($STH->execute($array)) {
                                                 echo "Successfully inserted record # $rowcount . <br/>";
