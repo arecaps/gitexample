@@ -12,9 +12,8 @@
                                 
         $rowcount = 0;
         
-	//put in name of csv file below
 		
-		@$handle = fopen("", "r");
+		@$handle = fopen("effy2011.csv", "r");
                         while (($data = fgetcsv($handle, 0, ",")) !== FALSE) {
                                 if($rowcount ==0){
                                         $rowcount++;
