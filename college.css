@@ -1,28 +1,49 @@
-h1 {
+h1    {
     text-align: center;
-    font-size: 180%;
-    color: sandybrown;
+    font-size: 400%;
+	color: sandybrown;
     font-family: fantasy;
-    transform:scale(2,1);
-    -webkit-transform:scale(2,1);
-}
+	}
+
+h2	{
+	font-size: 144%;
+	text-align:center;
+	margin-bottom:45px;
+	}
+
+#owl{
+	text-align:center;
+	padding:0;
+	}
+
 .home {
-    text-align: center;
-    font-size: 150%;
-    
+    text-align: left;
+    font-size: 145%;
+    }
+
+ul	{
+	color:sandybrown;
+	}
+
+	
+	input{
+	border:none;
+	color:none;
+	background-color:transparent;
+	font-size:18px;
+	}
+	
+
+	input:hover{
+	color:sandybrown;
+	cursor:pointer;
 }
-a {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-    color: red;
-}
-table {
+	table {
     border-collapse: collapse;
-    font-size: 180%;
-}
-tr:nth-child(even) {
+    font-size: 170%;
+	}
+
+	tr:nth-child(even) {
     background: whitesmoke;
 }
 th{
@@ -34,13 +55,14 @@ td {
 tr:hover {
     background: aliceblue;
 }
-input {
+.link {
     background-color:transparent;
     border: 0 none;
     font-size: 130%;
-    margin-bottom: 12px;}
+    margin-bottom: 12px;
+}
 
-input:hover {
+.link:hover {
     background-color:lightyellow;
     text-decoration:underline;
 }
@@ -53,3 +75,26 @@ div.centered table
     margin: 0 auto;
     text-align: left;
 }
+.state {
+    font-size: 180%;
+}
+aside {
+    font-family: Garamound;
+    font-size: 170%;
+    width: 10%;
+    float: left;
+    margin-right: 10px;
+    border: black 1px;
+        }
+div {
+    width: 88%;
+    float: right;
+    padding-left: 10px;
+        }
+.side {
+      font-size: 80%;
+      
+        }
+form {
+	margin-bottom:14px;
+	}
