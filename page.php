@@ -50,9 +50,14 @@ INNER JOIN institutions ON institutions.ID = financial11.ID ORDER BY Assets/Enro
 INNER JOIN institutions ON institutions.ID = financial11.ID ORDER BY Liabilities/Enrollment DESC LIMIT 10;">
                 </form></li>
                 <li><form action="main.php" method="POST">
-                        <input type="submit" value="Colleges with the largest percentage increase in liabilities between 2010 and 2011">
-                        <input name="query" type="hidden" value="SELECT Name,financial10.Liabilities AS Liabilities_2010, financial11.Liabilities AS Liabilities_2011 FROM financial11 INNER JOIN institutions ON institutions.ID = financial11.ID
+			<input class = "link" type="submit" value="Which colleges had the largest percentage increase in liabilities between 2010 and 2011?">
+			<input name="query" type="hidden" value="SELECT Name,financial10.Liabilities AS Liabilities_2010, financial11.Liabilities AS Liabilities_2011, financial11.Liabilities/financial10.Liabilities * 100 AS Percent FROM financial11 INNER JOIN institutions ON institutions.ID = financial11.ID 
 INNER JOIN financial10 ON institutions.ID = financial10.ID ORDER BY financial11.Liabilities/financial10.Liabilities DESC LIMIT 10;">
+		</form></li>
+                <li><form action="main.php" method="POST">
+			<input class = "link" type="submit" value="Which colleges had the largest percentage increase in enrollment between  2010 and 2011?">
+			<input name="query" type="hidden" value="SELECT Name, enrollment10.Enrollment AS Enrollment_2010, enrollment11.Enrollment AS Enrollment_2011, enrollment11.Enrollment/enrollment10.Enrollment * 100 AS Percent FROM enrollment11 
+INNER JOIN institutions ON institutions.ID = enrollment11.ID INNER JOIN enrollment10 ON institutions.ID = enrollment10.ID ORDER BY enrollment11.Enrollment/enrollment10.Enrollment  DESC LIMIT 10;">
                 </form></li></ul></div>
         </body>
 </html>
